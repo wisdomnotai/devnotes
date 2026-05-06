@@ -1,8 +1,18 @@
 #Importing dependencies
 from fastapi import FastAPI
+from typing import Optional, Literal
+from pydantic import BaseModel
 
 app = FastAPI()
 
+
+#creating input data schema
+
+class  CreatePost(BaseModel):
+    title:str
+    content: str 
+    tag: str
+    comment: Optional[str]
 
 #create posts
 @app.post("/post")
