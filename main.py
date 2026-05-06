@@ -12,7 +12,7 @@ class  CreatePost(BaseModel):
     title:str
     content: str 
     tag: str
-    comment: Optional[str]
+    comment: Optional[str] = None
 
 #create posts
 @app.post("/post")
