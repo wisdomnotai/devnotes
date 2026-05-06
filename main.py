@@ -22,4 +22,4 @@ def view_posts_title():
 #view posts by tag
 @app.get("/posts/{tag}")
 def view_posts_tag():
-    return {"data","taghe"}
+    return {"data":"taghe"}
